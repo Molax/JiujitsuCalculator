@@ -1,0 +1,14 @@
+﻿@model CalculadoraJiuJitsu.Models.Total
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h1>@ViewBag.Fb.name</h1>
+<h1>@ViewBag.Fb.id</h1>
+<h1>@Model.faixas[0].descricao</h1>
+
+<button class="btn-primary" id="postar">Postar no face</button>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jiu")
