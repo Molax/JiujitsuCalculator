@@ -1,0 +1,103 @@
+/* ==========================================================================
+   JP Miséra
+   ========================================================================== */
+
+
+body {
+	background-color: #487490;
+	padding: 50px 20px 20px 0;
+}
+
+.meujiujitsu {
+	max-width: 500px;
+}
+
+.jiujitsu {
+	max-width: 400px;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	position: relative;
+	right: 18px;
+}
+
+.btn {
+	font-size: 30px;
+	padding: 20px 40px;
+	border: none;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	color: #fff;
+}
+
+.btn:hover {
+	position: relative;
+	bottom: 5px;
+	color: #fff;
+}
+
+.btn-jiujitsu, .btn-jiujitsu:visited {
+	background-color: #db524a;
+}
+
+.btn-jiujitsu:hover {
+	background-color: #33e35c;
+}
+
+.titleuser {
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.logosmall {
+	width: 200px;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.nameuser a:hover {
+	text-decoration: none;
+}
+
+.form-btn {
+	margin-top: 30px;
+}
+
+.form {
+	margin-bottom: 30px;
+}
+
+.form label{
+	color: #fff;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 375px ) {
+	body {
+		padding: 60px 20px 0 20px;
+	}
+	.jiujitsu {
+		position: relative;
+		right: 0;
+	}
+	.btn-jiujitsu {
+		font-size: 25px;
+	}
+	.btn-form{
+		font-size: 20px;
+	}
+}
+
+
+
+
+
+

@@ -6,91 +6,92 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Dal;
+using System.Net;
 
 namespace CalculadoraJiuJitsu.Controllers
 {
     public class CalculadoraController : Controller
     {
-        public List<Models.classe> RetornaFaixa()
-        {
-            List<Models.classe> faixa = new List<Models.classe>();
+        //public List<Models.classe> RetornaFaixa()
+        //{
+        //    List<Models.classe> faixa = new List<Models.classe>();
 
-            using (var db = new BancoDataContext())
-            {
-                var faixas = db.Faixas.ToList();
-                foreach (var item in faixas)
-                {
-                    faixa.Add(new Models.classe
-                    {
-                        descricao = item.DESCRICAO,
-                        id = item.PK_ID_FAIXA,
-                        pontos = item.PONTOS
-                    });
-                }
+        //    using (var db = new BancoDataContext())
+        //    {
+        //        var faixas = db.Faixas.ToList();
+        //        foreach (var item in faixas)
+        //        {
+        //            faixa.Add(new Models.classe
+        //            {
+        //                descricao = item.DESCRICAO,
+        //                id = item.PK_ID_FAIXA,
+        //                pontos = item.PONTOS
+        //            });
+        //        }
 
-            }
-            return faixa;
-        }
+        //    }
+        //    return faixa;
+        //}
 
-        public List<Models.classe> RetornaModalidade()
-        {
-            List<Models.classe> modalidade = new List<Models.classe>();
+        //public List<Models.classe> RetornaModalidade()
+        //{
+        //    List<Models.classe> modalidade = new List<Models.classe>();
 
-            using (var db = new BancoDataContext())
-            {
-                var modalidades = db.Modalidades.ToList();
-                foreach (var item in modalidades)
-                {
-                    modalidade.Add(new Models.classe
-                    {
-                        descricao = item.DESCRICAO,
-                        id = item.PK_ID_MODALIDADE,
-                        pontos = item.PONTOS
-                    });
-                }
+        //    using (var db = new BancoDataContext())
+        //    {
+        //        var modalidades = db.Modalidades.ToList();
+        //        foreach (var item in modalidades)
+        //        {
+        //            modalidade.Add(new Models.classe
+        //            {
+        //                descricao = item.DESCRICAO,
+        //                id = item.PK_ID_MODALIDADE,
+        //                pontos = item.PONTOS
+        //            });
+        //        }
 
-            }
-            return modalidade;
-        }
+        //    }
+        //    return modalidade;
+        //}
 
-        public List<Models.classe> RetornaTempo()
-        {
-            List<Models.classe> tempo = new List<Models.classe>();
-            using (var db = new BancoDataContext())
-            {
-                var tempos = db.Tempos.ToList();
+        //public List<Models.classe> RetornaTempo()
+        //{
+        //    List<Models.classe> tempo = new List<Models.classe>();
+        //    using (var db = new BancoDataContext())
+        //    {
+        //        var tempos = db.Tempos.ToList();
 
-                foreach (var item in tempos)
-                {
-                    tempo.Add(new Models.classe {
-                        descricao = item.DESCRICAO,
-                        id = item.PK_ID_TEMPO,
-                        pontos = item.PONTOS
-                    });
-                }
-            }
+        //        foreach (var item in tempos)
+        //        {
+        //            tempo.Add(new Models.classe {
+        //                descricao = item.DESCRICAO,
+        //                id = item.PK_ID_TEMPO,
+        //                pontos = item.PONTOS
+        //            });
+        //        }
+        //    }
 
-            return tempo;
-        }
+        //    return tempo;
+        //}
 
 
-        public List<Models.classe> RetornaLugar()
-        {
-            List<Models.classe> lugar = new List<Models.classe>();
-            using (var db = new BancoDataContext())
-            {
-                var lugares = db.Lugars.ToList();
-                foreach (var item in lugares)
-                {
-                    lugar.Add(new Models.classe {
-                        descricao = item.DESCRICAO,
-                        id = item.PK_ID_LUGAR,
-                        pontos = item.PONTOS
-                    });
-                }
-            }
-            return lugar;
-        }
+        //public List<Models.classe> RetornaLugar()
+        //{
+        //    List<Models.classe> lugar = new List<Models.classe>();
+        //    using (var db = new BancoDataContext())
+        //    {
+        //        var lugares = db.Lugars.ToList();
+        //        foreach (var item in lugares)
+        //        {
+        //            lugar.Add(new Models.classe {
+        //                descricao = item.DESCRICAO,
+        //                id = item.PK_ID_LUGAR,
+        //                pontos = item.PONTOS
+        //            });
+        //        }
+        //    }
+        //    return lugar;
+        //}
 
         public ActionResult PublicarMensagem()
         {
@@ -127,10 +128,10 @@ namespace CalculadoraJiuJitsu.Controllers
         public ActionResult Index()
         {
             Models.Total total = new Models.Total();
-            total.faixas = RetornaFaixa();
-            total.lugares = RetornaLugar();
-            total.modalidades = RetornaModalidade();
-            total.tempos = RetornaTempo();
+            //total.faixas = RetornaFaixa();
+            //total.lugares = RetornaLugar();
+            //total.modalidades = RetornaModalidade();
+            //total.tempos = RetornaTempo();
 
 
             Models.facebook fb = new Models.facebook();
@@ -169,6 +170,11 @@ namespace CalculadoraJiuJitsu.Controllers
                 var request = __fb.Get("me");
                 ViewBag.Fb = request;
 
+                WebResponse response = null;
+                string pictureUrl = string.Empty;
+                WebRequest requests = WebRequest.Create(string.Format("https://graph.facebook.com/{0}/picture", ViewBag.Fb.id));
+                response = requests.GetResponse();
+                ViewBag.Foto = response.ResponseUri.ToString();
             }
             return View(total);
         }

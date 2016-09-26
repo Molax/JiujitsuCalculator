@@ -90,15 +90,3 @@ C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\Calcul
 C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\Facebook.xml
 C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\Dal.dll
 C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\Dal.pdb
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\DevExpress.Data.v16.1.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\DevExpress.Xpo.v16.1.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\DevExpress.Data.v16.1.xml
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\DevExpress.Xpo.v16.1.xml
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\de\DevExpress.Data.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\es\DevExpress.Data.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\ja\DevExpress.Data.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\ru\DevExpress.Data.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\de\DevExpress.Xpo.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\es\DevExpress.Xpo.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\ja\DevExpress.Xpo.v16.1.resources.dll
-C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\CalculadoraJiuJitsu\bin\ru\DevExpress.Xpo.v16.1.resources.dll
