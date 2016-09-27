@@ -10,6 +10,9 @@ namespace CalculadoraJiuJitsu.Controllers
 {
     public class API_JIUController : ApiController
     {
-   
+        [HttpPost]
+        public void CalculaPontos(Models.Pontos pontos)
+        {
+        }
     }
 }

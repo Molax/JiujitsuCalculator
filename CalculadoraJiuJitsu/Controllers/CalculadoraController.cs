@@ -12,6 +12,10 @@ namespace CalculadoraJiuJitsu.Controllers
 {
     public class CalculadoraController : Controller
     {
+        public void CalculaPontos(Models.Pontos pontos)
+        {
+        }
+
         //public List<Models.classe> RetornaFaixa()
         //{
         //    List<Models.classe> faixa = new List<Models.classe>();
