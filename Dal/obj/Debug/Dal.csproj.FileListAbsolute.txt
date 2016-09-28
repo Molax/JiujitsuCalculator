@@ -4,3 +4,9 @@ C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\Dal\bi
 C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\Dal\obj\Debug\Dal.csprojResolveAssemblyReference.cache
 C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\Dal\obj\Debug\Dal.dll
 C:\Users\mult-e\Documents\Visual Studio 2015\Projects\CalculadoraJiuJitsu\Dal\obj\Debug\Dal.pdb
+C:\Gitlab\JiujitsuCalculator\Dal\bin\Debug\Dal.dll.config
+C:\Gitlab\JiujitsuCalculator\Dal\bin\Debug\Dal.dll
+C:\Gitlab\JiujitsuCalculator\Dal\bin\Debug\Dal.pdb
+C:\Gitlab\JiujitsuCalculator\Dal\obj\Debug\Dal.csprojResolveAssemblyReference.cache
+C:\Gitlab\JiujitsuCalculator\Dal\obj\Debug\Dal.dll
+C:\Gitlab\JiujitsuCalculator\Dal\obj\Debug\Dal.pdb

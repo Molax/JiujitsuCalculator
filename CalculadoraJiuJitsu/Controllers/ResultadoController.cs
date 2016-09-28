@@ -11,6 +11,8 @@ namespace CalculadoraJiuJitsu.Controllers
         // GET: Resultado
         public ActionResult Index()
         {
+           
+
             return View();
         }
     }

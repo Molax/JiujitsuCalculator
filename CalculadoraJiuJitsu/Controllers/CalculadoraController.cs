@@ -12,90 +12,13 @@ namespace CalculadoraJiuJitsu.Controllers
 {
     public class CalculadoraController : Controller
     {
-        public void CalculaPontos(Models.Pontos pontos)
+        public int CalculaPontos(Models.Pontos pontos)
         {
+            int x = pontos.categoria + pontos.categoriaCamp1 + pontos.categoriaCamp2 + pontos.categoriaCamp3 + pontos.categoriaCamp4 + pontos.categoriaCamp5 + pontos.colocacaoCamp1 + pontos.colocacaoCamp2 + pontos.colocacaoCamp3 + pontos.colocacaoCamp4 + pontos.colocacaoCamp5 + pontos.faixa + pontos.faixaCamp1 + pontos.faixaCamp2 + pontos.faixaCamp3 + pontos.faixaCamp4 + pontos.faixaCamp5 + pontos.tempo;
+            Session.Add("PontosFace", x);
+
+            return 1;
         }
-
-        //public List<Models.classe> RetornaFaixa()
-        //{
-        //    List<Models.classe> faixa = new List<Models.classe>();
-
-        //    using (var db = new BancoDataContext())
-        //    {
-        //        var faixas = db.Faixas.ToList();
-        //        foreach (var item in faixas)
-        //        {
-        //            faixa.Add(new Models.classe
-        //            {
-        //                descricao = item.DESCRICAO,
-        //                id = item.PK_ID_FAIXA,
-        //                pontos = item.PONTOS
-        //            });
-        //        }
-
-        //    }
-        //    return faixa;
-        //}
-
-        //public List<Models.classe> RetornaModalidade()
-        //{
-        //    List<Models.classe> modalidade = new List<Models.classe>();
-
-        //    using (var db = new BancoDataContext())
-        //    {
-        //        var modalidades = db.Modalidades.ToList();
-        //        foreach (var item in modalidades)
-        //        {
-        //            modalidade.Add(new Models.classe
-        //            {
-        //                descricao = item.DESCRICAO,
-        //                id = item.PK_ID_MODALIDADE,
-        //                pontos = item.PONTOS
-        //            });
-        //        }
-
-        //    }
-        //    return modalidade;
-        //}
-
-        //public List<Models.classe> RetornaTempo()
-        //{
-        //    List<Models.classe> tempo = new List<Models.classe>();
-        //    using (var db = new BancoDataContext())
-        //    {
-        //        var tempos = db.Tempos.ToList();
-
-        //        foreach (var item in tempos)
-        //        {
-        //            tempo.Add(new Models.classe {
-        //                descricao = item.DESCRICAO,
-        //                id = item.PK_ID_TEMPO,
-        //                pontos = item.PONTOS
-        //            });
-        //        }
-        //    }
-
-        //    return tempo;
-        //}
-
-
-        //public List<Models.classe> RetornaLugar()
-        //{
-        //    List<Models.classe> lugar = new List<Models.classe>();
-        //    using (var db = new BancoDataContext())
-        //    {
-        //        var lugares = db.Lugars.ToList();
-        //        foreach (var item in lugares)
-        //        {
-        //            lugar.Add(new Models.classe {
-        //                descricao = item.DESCRICAO,
-        //                id = item.PK_ID_LUGAR,
-        //                pontos = item.PONTOS
-        //            });
-        //        }
-        //    }
-        //    return lugar;
-        //}
 
         public ActionResult PublicarMensagem()
         {
@@ -183,9 +106,11 @@ namespace CalculadoraJiuJitsu.Controllers
             return View(total);
         }
 
-        public void Calcular()
+        public ActionResult Calcular()
         {
-            Response.Redirect("/Resultado/Index");
+            ViewBag.Pontos = Session["PontosFace"].ToString();
+
+            return View();
         }
     }
 }

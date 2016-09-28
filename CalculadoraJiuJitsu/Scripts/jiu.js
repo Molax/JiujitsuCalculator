@@ -87,7 +87,8 @@ jiu.fn = {
                 "categoriaCamp5": $('#categoriaCamp5').val(),
             },
             success: function (e) {
-                
+                debugger;
+                window.location.href = 'Calcular';
             },
             error: function (e) {
                 
